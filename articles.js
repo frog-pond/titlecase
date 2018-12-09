@@ -1,1 +1,1 @@
-module.exports = [ 'the', 'a', 'an', 'some' ]
+module.exports = ["the", "a", "an", "some"]

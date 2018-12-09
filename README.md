@@ -1,43 +1,39 @@
 # David Gouch's String#toTitleCase() for Node.js
 
-This is a fork of David Gouch's excellent [`String#toTitleCase()`](https://github.com/gouch/to-title-case) method inspired by John Gruber's [post on the topic](http://daringfireball.net/2008/08/title_case_update)
+This is a fork of [@rvagg's fork](https://github.com/rvagg/archived-titlecase) of David Gouch's excellent [`String#toTitleCase()`](https://github.com/gouch/to-title-case) method inspired by John Gruber's [post on the topic](http://daringfireball.net/2008/08/title_case_update)
+
+I've removed the default export, forcing you to choose between `toTitleCase` and `toLaxTitleCase`.
+
+## rvagg's README
 
 I've simply taken it off the `String` prototype and exported it from a simple module.
 
 ```js
-var toTitleCase = require('titlecase')
+let { toTitleCase } = require("titlecase")
 
-console.log(toTitleCase('foo bar baz'))
+console.log(toTitleCase("foo bar baz"))
 ```
 
-See [Gouch's page](http://individed.com/code/to-title-case/) with inline converter. Also see this excellent **[table of test case results](http://individed.com/code/to-title-case/tests.html)** for different converters.
+See [Gouch's page](http://individed.com/code/to-title-case/) with inline converter. Also see this excellent [table of test case results](http://individed.com/code/to-title-case/tests.html) for different converters.
 
 In addition, I've added a more comprehensive list of words to not capitalise that includes articles, prepositions and conjunctions (see source files for lists), I'm calling this "lax title case", use it like so:
 
-
 ```js
-var toLaxTitleCase = require('titlecase').toLaxTitleCase
+let { toLaxTitleCase } = require("titlecase")
 
-console.log(toLaxTitleCase('foo bar baz'))
+console.log(toLaxTitleCase("foo bar baz"))
 ```
 
-**Using as an executable**
-
-Install with `npm install titlecase -g` and you'll get a `to-title-case` executable that you can run to titlecase strings:
-
-```
-$ to-title-case "what is this thing?"
-What Is This Thing?
-```
-
-*Original README:*
+## Original README
 
 # To Title Case for JavaScript
 
 Instructions: Include the to-title-case.js script and use the new .toTitleCase() method on the string you want converted.
 
 ## History
+
 ### 2.1 / 2013-11-03
+
 - Acknowledge characters outside of US-ASCII
 - Fix bug related to hyphenated small words
 - Replace baby's first testing script with the QUnit framework
@@ -74,4 +70,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
