@@ -18,5 +18,15 @@
   "license": "MIT",
   "bin": {
     "to-title-case": "./bin.js"
+  },
+  "scripts": {
+    "p": "npx prettier --write *.{js,md} test/*"
+  },
+  "devDependencies": {
+    "prettier": "^1.15.3"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "semi": false
   }
 }
