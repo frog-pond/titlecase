@@ -16,9 +16,6 @@
   ],
   "author": "Rod Vagg <rod@vagg.org>",
   "license": "MIT",
-  "bin": {
-    "to-title-case": "./bin.js"
-  },
   "scripts": {
     "p": "npx prettier --write *.{js,md} test/*"
   },
